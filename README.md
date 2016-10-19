@@ -1,7 +1,5 @@
 # DES Pada Program Java
 
-Bagas Wahyu Putratama 
-
 Array Tabel initial permutation(IP) 
 Tabel ini di gunakan untuk melakukan permutasi pada plaintext
 
@@ -189,7 +187,7 @@ tahap expand dimana plaintext bagian R yang memilki 32 bit di masukan ke dalam p
 		for(int i=0 ; i < 48 ; i++) {
 			expandedR[i] = R[E[i]-1];
 		}
-variabel temp menampung proses xor dimana R yang sudah di expand dan key yang sudah melalui proses PC2
+variabel temp untuk menampung proses xor dimana R yang sudah di expand dan key yang sudah melalui proses PC2
 
     int temp[] = xor(expandedR, roundKey);    
 nilai a merupakan R yang sudah di expand dan nilai b merupakan key yang sudah melalui proses PC2, berikut merupakan fungsi untuk melakukan xor 
@@ -203,9 +201,11 @@ nilai a merupakan R yang sudah di expand dan nilai b merupakan key yang sudah me
 	}
 berikut ini adalah fungsi yang di gunakan untuk melakukan pergeseran/rotasi
 
-     private static int[] leftShift(int[] bits, int n) {
+n berfungsi sebagai jumlah pergeseran bits
+
+     private static int[] leftShift(int[], int n) {
    
-pergeseran kiri terjadi di sini, i.n. setiap bit diputar ke kiri dan bit paling kiri disimpan di bit paling kanan. Ini adalah operasi left shift
+pergeseran key yang sudah di bagi 2 menjadi C dan D terjadi di sini, yang mana bit awal di geser ke bit terakhir dan sisanya setiap bit digeser ke kiri 
 
 		int answer[] = new int[bits.length];
 		System.arraycopy(bits, 0, answer, 0, bits.length);
