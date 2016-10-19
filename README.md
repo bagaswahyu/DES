@@ -218,5 +218,13 @@ pergeseran key yang sudah di bagi 2 menjadi C dan D terjadi di sini, yang mana b
 		}
 		return answer;
 	}
+fungsi di bawah ini merupakan proses permutasi yang telah melalui proses s-box. hasil dari proses s-box yang mengubah bit sebelumnya yaitu 48 bit menjadi 32 bit. dari situlah angka [32] berasal
+	
+	int finalOutput[] = new int[32];
+		for(int i=0 ; i < 32 ; i++) {
+			finalOutput[i] = output[P[i]-1];
+		}
+		return finalOutput;
+	}
 	
 	
